@@ -67,9 +67,99 @@ rdbr = td_b6_s143/(td_p3m_d9_ch/100)
                   ct_d1_nq3 : pas dans mes17
                   tce_nq : pas dans mes17
                   ct_d11_q3 : pas dans mes17
+                  smpt_q7 : pas dans mes17
+                  smpt_nq7 : pas dans mes17
+                  . ct_d1_q_dai3 : pas dans mes17
+                    ct_d1_q_dse3 : pas dans mes17
+                    ct_d1_q_nrj3 : pas dans mes17
+                    ct_d1_nq_dai3 : pas dans mes17
+                    ct_d1_nq_dse3 : pas dans mes17
+                    ct_d1_nq_nrj3 : pas dans mes17
+                    ct_d11_q_dai3 : pas dans mes17
+                    ct_d11_q_dse3 : pas dans mes17
+                    ct_d11_q_nrj3 : pas dans mes17
+                    ct_d11_nq_dai3 : pas dans mes17
+                    ct_d11_nq_dse3 : pas dans mes17
+                    ct_d11_nq_nrj3 : pas dans mes17
+                    tc_emps_q_dai7 = ct_emps_q_dai7 * td_b1_dai7_ch/td_b1_sm7_ch * tc_emps_q7
+                    tc_emps_q_dse7 = ct_emps_q_dse7 * td_b1_dse7_ch/td_b1_sm7_ch * tc_emps_q7
+                    tc_emps_q_nrj7 = ct_emps_q_nrj7 * td_b1_nrj7_ch/td_b1_sm7_ch * tc_emps_q7
+                    tc_emps_nq_dai7 = ct_emps_nq_dai7 * td_b1_dai7_ch/td_b1_sm7_ch * tc_emps_nq7
+                    tc_emps_nq_dse7 = ct_emps_nq_dse7 * td_b1_dse7_ch/td_b1_sm7_ch * tc_emps_nq7
+                    tc_emps_nq_nrj7 = ct_emps_nq_nrj7 * td_b1_nrj7_ch/td_b1_sm7_ch * tc_emps_nq7
+                    . ct_emps_q_dai7 : pas dans mes17
+                      ct_emps_q_dse7 : pas dans mes17
+                      ct_emps_q_nrj7 : pas dans mes17
+                      ct_emps_nq_dai7 : pas dans mes17
+                      ct_emps_nq_dse7 : pas dans mes17
+                      ct_emps_nq_nrj7 : pas dans mes17
+                      td_b1_dai7_ch : pas dans mes17
+                      td_b1_sm7_ch : pas dans mes17
+                      td_b1_dse7_ch : pas dans mes17
+                      td_b1_nrj7_ch : pas dans mes17
           . tc_d29_s14be3 = ct_d29_s14be3 * tc_d29_d3
             tc_d29_s14ae3 = ct_d29_s14ae3 * tc_d29_d3
-
+            . ct_d29_s14be3 : pas dans mes17
+              ct_d29_s14ae3 : pas dans mes17
+              tc_d29_d3 = tc_d29_dai3 + tc_d29_dse3 + tc_d29_dsa3 + tc_d29_dsn3 + tc_d29_nrj3
+              . tc_d29_dai3 = tc_d291_dai3 + tc_d292_dai3
+                tc_d29_dse3 = tc_d291_dse3 + tc_d292_dse3
+                tc_d29_dsa3 = tc_d291_dsa3 + tc_d292_dsa3
+                tc_d29_dsn3 = tc_d291_dsn3 + tc_d292_dsn3
+                tc_d29_nrj3 = tc_d291_nrj3 + tc_d292_nrj3
+                . tc_d291_dai3 = ct_d291_dai3 * tc_d11_dai3
+                  tc_d291_dse3 = ct_d291_dse3 * tc_d11_dse3
+                  tc_d291_dsa3 = ct_d291_dsa3 * tc_d11_dsa3
+                  tc_d291_dsn3 = ct_d291_dsn3 * tc_d11_dsn3
+                  tc_d291_nrj3 = ct_d291_nrj3 * tc_d11_nrj3
+                  tc_d292_dai3 = ct_d292_dai3 * td_b1_dai3
+                  tc_d292_dse3 = ct_d292_dse3 * td_b1_dse3
+                  tc_d292_dsa3 = ct_d292_dsa3 * td_b1_dsa3
+                  tc_d292_dsn3 = ct_d292_dsn3 * td_b1_dsn3
+                  tc_d292_nrj3 = ct_d292_nrj3 * td_b1_nrj3
+                  . ct_d291_dai3 : pas dans mes17
+                    ct_d291_dse3 : pas dans mes17
+                    ct_d291_dsa3 : pas dans mes17
+                    ct_d291_dsn3 : pas dans mes17
+                    ct_d291_nrj3 : pas dans mes17
+                    ct_d292_dai3 : pas dans mes17
+                    ct_d292_dse3 : pas dans mes17
+                    ct_d292_dsa3 : pas dans mes17
+                    ct_d292_dsn3 : pas dans mes17
+                    ct_d292_nrj3 : pas dans mes17
+                    tc_d11_dai3 = tc_d11_q_dai3 + tc_d11_nq_dai3
+                    tc_d11_dse3 = tc_d11_q_dse3 + tc_d11_nq_dse3
+                    tc_d11_dsa3 = tc_d11_q_dsa3 + tc_d11_nq_dsa3
+                    tc_d11_dsn3 = smpt_dsn/1000 * tc_emps_dsn1
+                    tc_d11_nrj3 = tc_d11_q_nrj3 + tc_d11_nq_nrj3
+                    td_b1_dai3 = td_b1_dai7_ch * td_b1_dai9_ch/100
+                    td_b1_dse3 = td_b1_dse7_ch * td_b1_dse9_ch/100
+                    td_b1_dsa3 = td_b1_dsa7_ch * td_b1_dsa9_ch/100
+                    td_b1_dsn3 = td_b1_dsn7_ch * td_b1_dsn9_ch/100
+                    td_b1_nrj3 = td_b1_nrj7_ch * td_b1_nrj9_ch/100
+                    . smpt_dsn = ct_smpt_dsn * (tc_emps_s131/tc_emps_dsn1 * smpt_s13 + tc_emps_dsn_hapu1/tc_emps_dsn1 * smpt_dsn_hapu)
+                      tc_emps_dsn1 = tc_emps_s131 + tc_emps_dsn_hapu1
+                      td_b1_dai9_ch : pas dans mes17
+                      td_b1_dse9_ch : pas dans mes17
+                      td_b1_dsa7_ch : pas dans mes17
+                      td_b1_dsa9_ch : pas dans mes17
+                      td_b1_dsn7_ch = ct_b1_dsn7_ch * tc_emps_dsn1 * exp(eff_dsn)
+                      td_b1_dsn9_ch = ct_b1_dsn9_ch * smpt_dsn/exp(eff_dsn)
+                      td_b1_nrj7_ch : pas dans mes17
+                      td_b1_nrj9_ch : pas dans mes17
+                      . ct_smpt_dsn : pas dans mes17
+                        tc_emps_s131 : pas dans mes17
+                        smpt_s13 = ct_smpt_s13 * smpt_sm
+                        tc_emps_dsn_hapu1 : pas dans mes17
+                        smpt_dsn_hapu = ct_smpt_dsn_hapu * smpt_sm
+                        ct_b1_dsn7_ch : pas dans mes17
+                        eff_dsn : pas dans mes17
+                        ct_b1_dsn9_ch : pas dans mes17
+                        . ct_smpt_s13 : pas dans mes17
+                          smpt_sm = ct_coefeqtp_sm * smpt_sm7
+                          ct_smpt_dsn_hapu : pas dans mes17
+                          . ct_coefeqtp_sm = tc_emps_sm7/tc_emps_sm1
+                            . tc_emps_sm1 : pas dans mes17
           . tc_d39_s14be3 = ct_d39_s14be3 * tc_d39_d3
             tc_d39_s14ae3 = ct_d39_s14ae3 * tc_d39_d3
     . tc_d11_s14r3
