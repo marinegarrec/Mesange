@@ -9,19 +9,31 @@ rdbr calculé à partir d'autres variables : rdbr = td_b6_s143/(td_p3m_d9_ch/100
           td_b2_s14a3 = td_b1_s14a3 - tc_d11_s14ae3 - tc_d12_s14ae3 - tc_d29_s14ae3 - tc_d39_s14ae3
           . td_b1_s14b3 = ct_b1_s14b3 * td_b1_d3
             td_b1_s14a3 = ct_b1_s14a3 * td_b1_d3
-            . ct_b1_s14b3 = pas dans mes17
-              ct_b1_s14a3 = pas dans mes17
+            . ct_b1_s14b3 : pas dans mes17
+              ct_b1_s14a3 : pas dans mes17
               td_b1_d3 = td_p1e_d3 - td_p2e_d3
-                . td_p1e_d3 = pas dans mes17
+                . td_p1e_d3 : pas dans mes17
                   td_p2e_d3 = td_p2e_d7_ch * td_p2e_d9_ch/100
-                  . td_p2e_d7_ch = pas dans mes17
-                    td_p2e_d9_ch = pas dans mes17
+                  . td_p2e_d7_ch : pas dans mes17
+                    td_p2e_d9_ch : pas dans mes17
           . tc_d11_s14be3 = ct_d11_s14be3 * smpt_sm7 * tc_emps_s14b7
-          . tc_d11_s14ae3 = ct_d11_s14ae3 * smpt_sm7 * tc_emps_s14a7
+            tc_d11_s14ae3 = ct_d11_s14ae3 * smpt_sm7 * tc_emps_s14a7
+                . ct_d11_s14be3 : pas dans mes17
+                  smpt_sm7 = 1000 * tc_d11_sm3/tc_emps_sm7
+                  tc_emps_s14b7 = ct_emps_s14b7 * td_b1_s14b3/smpt_sm7
+                  . ct_emps_s14b7 : pas dans mes17
+                    tc_d11_sm3 = tc_d11_q3 + tc_d11_nq3
+                    tc_emps_sm7 = tc_emps_q7 + tc_emps_nq7
+                    . tc_d11_q3 = ct_d11_q3 * tc_emps_q7 * smpt_q7
+                      tc_d11_nq3 = ct_d11_nq3 * tc_emps_nq7 * smpt_nq7
+                      . ct_d11_q3 : pas dans mes17
+                        ct_d11_nq3 : pas dans mes17
           . tc_d12_s14be3 = ct_d12_s14be3 * tc_d11_s14be3 * (tc_d1_dsa3/tc_d11_dsa3 - 1)
-          . tc_d12_s14ae3 = ct_d12_s14ae3 * tc_d11_s14ae3 * (tc_d1_sm3/tc_d11_sm3 - 1)
+            tc_d12_s14ae3 = ct_d12_s14ae3 * tc_d11_s14ae3 * (tc_d1_sm3/tc_d11_sm3 - 1)
+
           . tc_d29_s14be3 = ct_d29_s14be3 * tc_d29_d3
-          . tc_d29_s14ae3 = ct_d29_s14ae3 * tc_d29_d3
+            tc_d29_s14ae3 = ct_d29_s14ae3 * tc_d29_d3
+
           . tc_d39_s14be3 = ct_d39_s14be3 * tc_d39_d3
-          . tc_d39_s14ae3 = ct_d39_s14ae3 * tc_d39_d3
+            tc_d39_s14ae3 = ct_d39_s14ae3 * tc_d39_d3
   . td_p3m_d9_ch = Indice de prix chaînés des dépenses de consommation finale des ménages de l'économie : https://www.insee.fr/fr/statistiques/8219090
