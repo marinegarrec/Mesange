@@ -162,12 +162,55 @@ rdbr = td_b6_s143/(td_p3m_d9_ch/100)
                             . tc_emps_sm1 : pas dans mes17
           . tc_d39_s14be3 = ct_d39_s14be3 * tc_d39_d3
             tc_d39_s14ae3 = ct_d39_s14ae3 * tc_d39_d3
-    . tc_d11_s14r3
-    . tc_d41_s14s3
-    . tc_d42_s14r3
-    . tc_d4z_s14s3
-    . tc_d62_s14r3
-    . tc_d7_s14s3
-    . tc_d5_s14e3
-    . tc_d613z_s14e3
+            . ct_d39_s14be3 : pas dans mes17
+              ct_d39_s14ae3 : pas dans mes17
+              tc_d39_d3 = tc_d39_dai3 + tc_d39_dse3 + tc_d39_dsa3 + tc_d39_dsn3 + tc_d39_nrj3
+              . tc_d39_dai3 = ct_d39_dai3 * td_b1_dai3
+                tc_d39_dse3 = ct_d39_dse3 * td_b1_dse3
+                tc_d39_dsa3 = ct_d39_dsa3 * td_b1_dsa3
+                tc_d39_dsn3 = ct_d39_dsn3 * td_b1_dsn3
+                tc_d39_nrj3 = ct_d39_nrj3 * td_b1_nrj3
+                . ct_d39_dai3 : pas dans mes17
+                  ct_d39_dse3 : pas dans mes17
+                  ct_d39_dsa3 : pas dans mes17
+                  ct_d39_dsn3 : pas dans mes17
+                  ct_d39_nrj3 : pas dans mes17
+    . tc_d11_s14r3 = tc_d11_s11e3 + tc_d11_s12e3 + tc_d11_s13e3 + tc_d11_s14e3 + tc_d11_s15e3 + tc_d11_s2e3 - tc_d11_s2r3
+      . tc_d11_s11e3 = tc_d11_d3 - (tc_d11_s12e3 + tc_d11_s13e3 + tc_d11_s14ae3 + tc_d11_s14be3 + tc_d11_s15e3)
+        tc_d11_s12e3 = ct_d11_s12e3 * tc_d11_sm3
+        tc_d11_s13e3 = smpt_s13/1000 * tc_emps_s131
+        tc_d11_s14e3 = tc_d11_s14ae3 + tc_d11_s14be3
+        tc_d11_s15e3 = ct_d11_s15e3 * tc_d11_sm3
+        tc_d11_s2e3 = ct_d11_s2e3 * td_pib3
+        tc_d11_s2r3 = ct_d11_s2r3 * tc_d11_sm3
+        . tc_d11_d3 = tc_d11_sm3 + tc_d11_dsn3
+          ct_d11_s12e3 : pas dans mes17
+          ct_d11_s15e3 : pas dans mes17
+          ct_d11_s2e3 : pas dans mes17
+          ct_d11_s2r3 : pas dans mes17
+          td_pib3 = td_pib7_ch * td_pib9_ch/100
+          . td_pib7_ch : pas dans mes17
+            td_pib9_ch : pas dans mes17
+    . tc_d41_s14s3 = tc_d41_s14r3 - tc_d41_s14e3
+      . tc_d41_s14r3 =  - (tc_d41_s11s3) - tc_d41_s12s3 - tc_d41_s13s3 - tc_d41_s15s3 - tc_d41_s2s3 + tc_d41_s14e3
+        tc_d41_s14e3 = ct_d41_s14e3 * 0.25 * (td_b1_s123 + mylg(td_b1_s123, - 1) + mylg(td_b1_s123, - 2) + mylg(td_b1_s123, - 3))
+        . tc_d41_s11s3 = tc_d41_s11r3 - tc_d41_s11e3
+          tc_d41_s12s3 = ct_d41_s12s3 * 0.25 * (td_b1_d3 + mylg(td_b1_d3, - 1) + mylg(td_b1_d3, - 2) + mylg(td_b1_d3, - 3))
+          tc_d41_s13s3 : pas dans mes17
+          tc_d41_s15s3 = ct_d41_s15s3 * 0.25 * (td_b1_s123 + mylg(td_b1_s123, - 1) + mylg(td_b1_s123, - 2) + mylg(td_b1_s123, - 3))
+          tc_d41_s2s3 = ct_d41_s2s3 * 0.25 * (td_b1_d3 + mylg(td_b1_d3, - 1) + mylg(td_b1_d3, - 2) + mylg(td_b1_d3, - 3))
+          ct_d41_s14e3 : pas dans mes17
+          td_b1_s123 = ct_b1_s123 * td_b1_dse3
+          . tc_d41_s11r3 = ct_d41_s11r3 * 0.25 * (td_b1_d3 + mylg(td_b1_d3, - 1) + mylg(td_b1_d3, - 2) + mylg(td_b1_d3, - 3))
+            tc_d41_s11e3 = ct_d41_s11e3 * 0.25 * (td_b1_d3 + mylg(td_b1_d3, - 1) + mylg(td_b1_d3, - 2) + mylg(td_b1_d3, - 3))
+            ct_d41_s12s3 : pas dans mes17
+            ct_d41_s15s3 : pas dans mes17
+            ct_d41_s2s3 : pas dans mes17
+            ct_b1_s123 : pas dans mes17
+    . tc_d42_s14r3 = ct_d42_s14r3 * 0.25 * (td_b1_s113 + td_b1_s123 + mylg(td_b1_s113, - 1) + mylg(td_b1_s123, - 1) + mylg(td_b1_s113, - 2) + mylg(td_b1_s123, - 2) + mylg(td_b1_s113, - 3) + mylg(td_b1_s123, - 3))
+    . tc_d4z_s14s3 = ct_d4z_s14s3 * 0.25 * (td_b1_s113 + td_b1_s123 + mylg(td_b1_s113, - 1) + mylg(td_b1_s123, - 1) + mylg(td_b1_s113, - 2) + mylg(td_b1_s123, - 2) + mylg(td_b1_s113, - 3) + mylg(td_b1_s123, - 3))
+    . tc_d62_s14r3 = tc_d62_s13e3 + tc_d62_s11e3 + tc_d62_s12e3 + tc_d62_s15e3 - tc_d62_s2s3
+    . tc_d7_s14s3 = ct_d7_s14s3 * td_pib3
+    . tc_d5_s14e3 = tc_d51_s14e3 + tc_d59_s14e3
+    . tc_d613z_s14e3 = tc_d6112_s14e3 + tc_d6113_s14e3
   . td_p3m_d9_ch = Indice de prix chaînés des dépenses de consommation finale des ménages de l'économie : https://www.insee.fr/fr/statistiques/8219090
