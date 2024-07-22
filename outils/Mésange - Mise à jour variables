@@ -207,9 +207,33 @@ rdbr = td_b6_s143/(td_p3m_d9_ch/100)
             ct_d41_s15s3 : pas dans mes17
             ct_d41_s2s3 : pas dans mes17
             ct_b1_s123 : pas dans mes17
+            . ct_d41_s11r3 : pas dans mes17
+              ct_d41_s11e3 : pas dans mes17
     . tc_d42_s14r3 = ct_d42_s14r3 * 0.25 * (td_b1_s113 + td_b1_s123 + mylg(td_b1_s113, - 1) + mylg(td_b1_s123, - 1) + mylg(td_b1_s113, - 2) + mylg(td_b1_s123, - 2) + mylg(td_b1_s113, - 3) + mylg(td_b1_s123, - 3))
+      . ct_d42_s14r3 : pas dans mes17
+        td_b1_s113 = td_b1_d3 - (td_b1_s123 + td_b1_s133 + td_b1_s14a3 + td_b1_s14b3 + td_b1_s153)
+        . td_b1_s133 = ct_b1_s133 * tc_d1_s13e3
+          td_b1_s153 = ct_b1_s153 * td_b1_dsn3
+          . ct_b1_s133 : pas dans mes17
+            ct_b1_s153 : pas dans mes17
+            tc_d1_s13e3 = tc_d11_s13e3 + tc_d12_s13e3
+            . tc_d12_s13e3 = ct_d12_s13e3 * tc_d11_s13e3
+              . ct_d12_s13e3 : pas dans mes17
     . tc_d4z_s14s3 = ct_d4z_s14s3 * 0.25 * (td_b1_s113 + td_b1_s123 + mylg(td_b1_s113, - 1) + mylg(td_b1_s123, - 1) + mylg(td_b1_s113, - 2) + mylg(td_b1_s123, - 2) + mylg(td_b1_s113, - 3) + mylg(td_b1_s123, - 3))
+      . ct_d12_s13e3 : pas dans mes17
     . tc_d62_s14r3 = tc_d62_s13e3 + tc_d62_s11e3 + tc_d62_s12e3 + tc_d62_s15e3 - tc_d62_s2s3
+      . tc_d62_s13e3 = tc_d62cho_s13e3 + tc_d62hcho_s13e3
+        tc_d62_s11e3 = ct_d62_s11e3 * tc_d62hcho_s13e3
+        tc_d62_s12e3 = ct_d62_s12e3 * tc_d62hcho_s13e3
+        tc_d62_s15e3 = ct_d62_s15e3 * tc_d62_s14r3
+        tc_d62_s2s3 = ct_d62_s2s3 * tc_d62_s14r3
+        . tc_d62cho_s13e3
+          tc_d62hcho_s13e3
+          ct_d62_s11e3
+          ct_d62_s12e3
+          ct_d62_s15e3
+          ct_d62_s15e3
+          ct_d62_s2s3
     . tc_d7_s14s3 = ct_d7_s14s3 * td_pib3
     . tc_d5_s14e3 = tc_d51_s14e3 + tc_d59_s14e3
     . tc_d613z_s14e3 = tc_d6112_s14e3 + tc_d6113_s14e3
